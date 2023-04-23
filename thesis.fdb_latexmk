@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1682254953 "algebra.dvi" "algebra.pdf" "algebra" 1682254953 0
-  "algebra.dvi" 1682254953 19076 e6bf5e8f417f21318b0d850191f8fad7 "latex"
+["dvipdf"] 1682255712 "thesis.dvi" "thesis.pdf" "thesis" 1682255712 0
+  "thesis.dvi" 1682255712 30364 c048a909240d585bce5978234a9891aa "latex"
   (generated)
-  "algebra.pdf"
+  "thesis.pdf"
   (rewritten before read)
-["latex"] 1682254953 "/Users/ajj-k/Desktop/college_seminar_number_theory/algebra.tex" "algebra.dvi" "algebra" 1682254953 0
-  "/Users/ajj-k/Desktop/college_seminar_number_theory/algebra.tex" 1682254953 13733 537d60803ae250ca9e9d33128e172236 ""
+["latex"] 1682255712 "/Users/ajj-k/Desktop/college_seminar_number_theory/thesis.tex" "thesis.dvi" "thesis" 1682255712 0
+  "/Users/ajj-k/Desktop/college_seminar_number_theory/thesis.tex" 1682255711 1230 e29aeeeb349145ae4a4a2a72e10105ac ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm" 1463434352 856 39c171483fe1bb7d0e1368980c0c205b ""
@@ -27,6 +27,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1136768653 1300 b62933e007d01cfd073f79b963c01526 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss12.tfm" 1136768653 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
@@ -37,6 +38,8 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-v.tfm" 1320249963 504 90cc0bfc6764b11e5837e72f13617993 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm" 1320249963 504 e15e0ced49bc0fca57e32b1199da50ac ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm" 1320249963 504 90cc0bfc6764b11e5837e72f13617993 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/japanese-otf/utfjmrf-h.tfm" 1645134245 432 2d55b2c8c6d889528c9e54947ad09f48 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/japanese-otf/utfjmrf-v.tfm" 1320249963 172 3c1e14f3b2533bc0571f4d68408cebdf ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty" 1591045760 12594 0d51ac3a545aaaa555021326ff22a6cc ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1359763108 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty" 1359763108 13829 94730e64147574077f8ecfea9bb69af4 ""
@@ -53,6 +56,7 @@
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty" 1654720880 8010 a8d949cbdbc5c983593827c9eec252e1 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty" 1654720880 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty" 1654720880 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/import/import.sty" 1586645574 6201 0ad8b5da8e12f60a88d546b2198a56f2 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def" 1673989714 36094 f50bbd0ac1e5d89f3bafd820930998cd ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty" 1656621545 62269 5c1837a5bc5db4c0d255eedc225ca44b ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty" 1616101747 5582 a43dedf8e5ec418356f1e9dfe5d29fc3 ""
@@ -64,10 +68,12 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/web2c/eptex/platex.fmt" 1680590991 7883690 4fdbaac441baca0ec1c1d6fa43389cd3 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "algebra.aux" 1682254953 32 c81c40425fbb5e93b90fba65da0b5e61 "latex"
-  "algebra.tex" 1682254953 13733 537d60803ae250ca9e9d33128e172236 ""
+  "ohashi/15-21.tex" 1682255494 13791 e88b39ce94f5cda3988370c6992ed5be ""
+  "osumi/202303.tex" 1682255544 7764 0c5126a2d78ada74332ec02c03d2719b ""
+  "thesis.aux" 1682255712 244 9355531fff082509b07c2fd1fb395e92 "latex"
+  "thesis.tex" 1682255711 1230 e29aeeeb349145ae4a4a2a72e10105ac ""
   (generated)
-  "algebra.aux"
-  "algebra.dvi"
-  "algebra.log"
+  "thesis.aux"
+  "thesis.dvi"
+  "thesis.log"
   (rewritten before read)

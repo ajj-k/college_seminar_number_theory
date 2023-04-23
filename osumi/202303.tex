@@ -1,0 +1,161 @@
+% \documentclass{jsarticle}
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{amsfonts}
+% \usepackage{amsthm}
+
+% \newtheorem{dfn}{Dfn}
+% \newtheorem{thm}{Thm}
+% \newtheorem*{prop}{Prop}
+% \newtheorem{cor}{Cor}
+% \newtheorem*{lem}{Lem}
+% \newtheorem*{axm}{Axm}
+
+
+
+% \begin{document}
+
+\section{整数の基本性質}
+
+$\mathbb{Z}$には和と積が定義でき,結合法則・交換法則・分配法則が成り立つ.つまり$a,b,c\in\mathbb{Z}$ならば
+\vskip\baselineskip
+$(a+b)+c=a+(b+c), (ab)c=a(bc),$
+\\$a+b=b+a, ab=ba,$
+\\ $a+0=0+a=a, a1=1a=a,$
+\\ $a(b+c)=ab+ac$
+ \vskip\baselineskip
+である.
+\vskip\baselineskip
+$x\in\mathbb{N}$は$x\in\mathbb{N}$であるときに$x\geqq0$と定義する.
+\\さらに正の整数を$x\geqq0$であって$x\ne0$,同様に負の整数を$x\leq0$であって$x\ne0$と定義する.
+
+$x,y\in\mathbb{Z},x-y>0(x-y\geqq0)$なら,$x>y(x\geqq y)$と定義する.
+\\$x,y\in\mathbb{Z}$なら,$x>y,x=y,x<y$のどれか一つが必ず成り立つ.$x\geqq y$なら,
+\\$max｛x,y｝=x, min｛x,y｝=y$と定義する.
+\\$x\leq y$である場合も同様で,$n$が正の整数ならば,$n$以下の正の整数の数は有限であることを認める.
+\\整数の大小関係について以下が成り立つ.
+
+$a,b,c\in\mathbb{Z},c>0$なら
+$a>b\iff a+c>b+c \iff ac\ne bc$が成り立つ.(1.3.1)
+\\なお,$c<0$なら$ac<bc$である.特に$c\ne0$ならば,
+\\$a\ne b \iff ac\ne bc$(1.3.2)
+\vskip\baselineskip
+また$x\in\mathbb{R}$に対して,
+\begin{equation}
+|x|=
+\begin{cases}x & \text{$x\geqq0$}
+\\-x & \text{$x \leq 0$}
+\end{cases}
+\end{equation}
+と絶対値を定義する.$n$が正の整数なら,$|x|\leq n$である整数の個数は$2n+1$個であり,有限である.
+\vskip\baselineskip
+公理として次の性質を述べる.
+
+\begin{axm}{\rm\bf1.3.3}
+1は最小の正の整数である
+\end{axm}
+この公理を認めると,$n\in\mathbb{N},n<m$である最小の
+$m$が$n-m>0$より,$n-m=1$を満たす.よって$n$より大きい整数の中で最小のものは$n+1$とわかる。
+
+
+\begin{prop}{\rm\bf1.3.4}
+\quad $a>0$を整数とするとき,次の（1）\UTF{FF5E}（3）が成り立つ
+\\(1)$b\in\mathbb{Z}$,$|b-a|<1$なら,$b=a$である.
+\\(2)$|b|<1$なら,$b=0$である.
+\\(3)$b,b'\in\mathbb{Z},0\leq b,b'\leq a,$なら,$|b-b'|<a$
+\end{prop}
+
+\begin{proof}
+(1)\quad $c=b-a$とおく,$c\in\mathbb{Z},|c|<1$である,$c>0$なら$0<c<1$となり,この整数$ｃ$は正の１より小さい整数なので,\textbf{Axm1.3.3}に矛盾する.$c<0$ならば$-1<c<0$なので$0<-ｃ<１$となりこれも公理1.3.3に矛盾する.従って$c=0,$つまり$b=a$である.
+\\(2)\quad $|b|<1$で$b>0$なら$0<b<1$となり、\textbf{Axm1.3.3}に矛盾,と（1）と同様に$b=0$が示される.また,この命題「$|b|<1$なら$b=0$」の対偶をとると「$b\ne0$ならば$|b|\geqq1$」も導かれる.
+\\(3)\quad $b'\geqq0$と$b<a$より$b-b' \leq b<a$,また,$b\geqq0$と$b'<a$より$b-b'\geqq-b'>-a$従って$-a<b-b'<a$となる.
+\end{proof}
+
+\begin{axm}{\rm\bf1.3.5}
+アルキメデスの公理 \quad $x>0$が実数なら,$x$以下の正の整数の数は有限個である.
+\end{axm}
+
+\textbf{Axm1.3.5}を認めると,正の実数$x$に対して,$x$以下の整数で最大のものが存在すると分かる.これを[$x$]と書く.[$x$]の定義より,$x<[x]+1$である.$y\in\mathbb{Z}$で$x<y$ならば,$[x]<y$なので$[x]+1\leq y$である.
+逆に$[x]+1\leq y$なら,$x<[x]+1$なので,,$x<[x]+1\leq yからx<y$である.よって$y=[x]+1$が$x<y$である最小の整数である.負の場合も$x$以下の最大の整数が存在することがわかる.この$[x]$をガウス記号と呼ぶ.
+$[x]$の定義より,$[x]\leq x<[x]+1$である.$x>0$の場合と同様に$y=[x]+1$は$y>x$である最小の整数である.
+
+
+\section{整数の合同}
+
+\begin{dfn}{\rm\bf1.4.1}
+$a,b\in\mathbb{Z}$とする.
+\\(1)$a\ne0$であるとき,$b=an$となる$n\in\mathbb{Z}$があるなら,$b$を$a$の倍数,$a$を$b$の約数といい,$a|b$と書く.$b$が$a$の倍数でないなら,$a\not|b$と書く
+\\(2)$a,b$の共通の約数を$a,b$ の公約数と呼ぶ
+\\(3)$a\ne0$かつ$b\ne0$であるとき,$a,b$の共通の倍数を$a,b$の公倍数という
+\end{dfn}
+
+\begin{prop}{\rm\bf1.4.2}
+$a,b\in\mathbb{Z}\setminus {｛0｝}$で$b|a$ならば,$|b|\leq|a|$である.よって$a$の約数の個数は有限である
+$a=bn$となる$n\in\mathbb{N}$がある.$a\ne0$なので,$n\ne0$である.$|n|>0$は整数なので,\textbf{Axm1.3.3}より$|n|\geqq1$である,よって,$|a|=|b||n|\geqq|b|$である
+\end{prop}
+
+
+絶対値が$1$以下である整数は,$\pm1,0$だけなので,次の系を得る.
+
+\begin{cor}{\rm\bf1.4.3}
+\quad $1$の約数は$\pm1$である
+\end{cor}
+
+\begin{cor}{\rm\bf1.4.4}
+\quad $p$が素数なら$p\not|1$
+\end{cor}
+\begin{proof}
+  \textbf{Cor1.4.3}より,1の約数は$\pm1$のみなので,$p$が素数であれば,$p$は１の約数ではない,つまり1は$p$で割り切れない.
+\end{proof}
+
+\begin{dfn}{\rm\bf1.4.5}
+$a,b\in\mathbb{Z}$とする
+\\(1)$a\ne0$または$b\ne0$であるとき,$a,b$の正の公約数の中で最大のものを最大公約数といい,$gcd(a,b)$と書く,$gcd(a,b)=1$ならば,$a,b$は互いに素であるという
+\\(2)$a,b\ne0$なら,$a,b$の正の公倍数の中で最小のものを最小公倍数といい,$lcm(a,b)$と書く
+\end{dfn}
+
+\textbf{Prop1.4.2}より約数の個数は有限個であり,従って$a,b$の公約数の個数も有限個である.これにより有限個の公約数の中に最大のものがあるので,\textbf{Dfn1.4.5}(1)は正当化される.(2)では,$|ab|$は$a,b$の公倍数であり,$|ab|$以下の正の整数の個数は有限なので,その中に$|ab|$の約数であって最小のものが存在する.よって\text{Dfn1.4.5}(2)も正当化される.
+
+\begin{prop}{\rm\bf1.4.7}
+(1)\quad $a|b,b|c$なら,$a|c$である
+\\(2)\quad $m\ne0$なら,$a|b\iff am|bm$
+\end{prop}
+
+\begin{proof}
+(1)\quad $a|b,b|c$より,$b=an,c=bm$となる$n,m\in\mathbb{Z}$が存在する.代入して,$c=anm$よって$a|c$
+\\(2)\quad まず$a|b \implies am|bm$を示す.
+\\$a|b \implies b=an(n\in\mathbb{Z})$ この両辺に$m\ne0$をかけて$bm=anm$,$n\in\mathbb{Z}$より$am|bm$
+次に$am|bm \implies a|b$を示す.$am|bm \implies bm=amn(n\in\mathbb{Z})$この両辺を$m\ne0$で割ると$b=an$よって$a|b$
+\\従って$m\ne0$なら,$a|b\iff am|bm$
+\end{proof}
+
+\vskip\baselineskip
+数学的帰納法についての復習をしておこう.
+$P_n$を自然数$ｎ$に対し与えられた数学的主張とするとき,次のような論法を数学的帰納法,または単に帰納法という.
+\\数学的帰納法１ \quad $P_0$が正しく,$P_n$が正しいなら$P_n+1$が正しいとき,$P_n$は全ての$n$に対して正しい.
+\\また次のように使うこともある
+\\数学的帰納法２ \quad $P_0$が正しく,「全ての$m<n$に対し$P_m$が正しい」なら$P_m$が正しいとき,$P_n$は全ての$n$に対して正しい.
+
+\begin{prop}{\rm\bf1.4.8}
+$n>1$が整数なら,$n$の約数で素数であるものがある
+\end{prop}
+
+\begin{proof}
+$n$が素数でなければ,$1<m<n$を$n$の約数にもつ.ここで$P_n$を
+\\$P_n$「$n>1$が整数なら,$n$の約数で素数であるものがある」とする.$P_2$は2が約数に素数2を持つので正しい.ここで$n>1$を整数とし,「全ての$m<n$に対し,$P_m$が正しい」と仮定する.このとき$P_n$が正しいことを示す.
+\\仮定より全ての$m<n$に対し$P_m$が正しい,つまり$n$より小さい整数$m$は素数$p$を約数にもつ.今.$m$は$n$の約数としてとってきたので,\textbf{prop1.4.7}(1)から$n$も$p$を約数に持つ.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+% \end{document}

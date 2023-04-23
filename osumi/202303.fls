@@ -1,0 +1,8 @@
+PWD /Users/ajj-k/Desktop/college_seminar_number_theory/osumi
+INPUT /usr/local/texlive/2023/texmf.cnf
+INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2023/texmf.cnf
+INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2023/texmf-var/web2c/eptex/platex.fmt
+INPUT /Users/ajj-k/Desktop/college_seminar_number_theory/osumi/202303.tex
+OUTPUT 202303.log

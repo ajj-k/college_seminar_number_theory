@@ -1,0 +1,42 @@
+\documentclass{jsarticle}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{otf}
+\usepackage{import}
+\usepackage{amsfonts}
+% 括弧についてのパッケージ
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert} % | | absolute value
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert} % || || norm
+\DeclarePairedDelimiter{\rbra}{\lparen}{\rparen} % () round brackets
+\DeclarePairedDelimiter{\cbra}{\lbrace}{\rbrace} % {} curly brackets
+\DeclarePairedDelimiter{\sbra}{\lbrack}{\rbrack} % [] square brackets
+\DeclarePairedDelimiter{\abra}{\langle}{\rangle} % < > angle brackets
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor} % floor function
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil} % ceil function
+% 定義についてのパッケージ
+\usepackage{amsthm}
+\newtheorem{dfn}{Def}
+\newtheorem{thm}{Thm}
+\newtheorem{prop}{Prop}
+\newtheorem{cor}{Cor}
+\newtheorem{lem}{Lem}
+\newtheorem{ex}{Ex}
+\newtheorem*{axm}{Axm}
+% newcommandに関する定義
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\nat}{\mathbb{N}}
+
+
+\title{ゼミレポート}
+\author{Kiyoshi Ohashi, Syogo Osumi}
+\date{2023年4月7日}
+
+\begin{document}
+  \maketitle
+
+  \import{osumi/}{202303.tex}
+  \import{ohashi/}{15-21.tex}
+
+\end{document}
