@@ -2,26 +2,39 @@
 
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{otf}
+% 括弧についてのパッケージ
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert} % | | absolute value
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert} % || || norm
+\DeclarePairedDelimiter{\rbra}{\lparen}{\rparen} % () round brackets
+\DeclarePairedDelimiter{\cbra}{\lbrace}{\rbrace} % {} curly brackets
+\DeclarePairedDelimiter{\sbra}{\lbrack}{\rbrack} % [] square brackets
+\DeclarePairedDelimiter{\abra}{\langle}{\rangle} % < > angle brackets
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor} % floor function
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil} % ceil function
 % 定義についてのパッケージ
 \usepackage{amsthm}
 \newtheorem{dfn}{Def}
 \newtheorem{thm}{Thm}
-\newtheorem*{prop}{Prop}
+\newtheorem{prop}{Prop}
 \newtheorem{cor}{Cor}
-\newtheorem*{lem}{Lem}
+\newtheorem{lem}{Lem}
+\newtheorem{ex}{Ex}
+% newcommandに関する定義
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\nat}{\mathbb{N}}
+
 
 \title{ゼミレポート}
-\author{kiyoshi ohashi}
+\author{Kiyoshi Ohashi, Syogo Osumi}
 \date{2023年4月7日}
 
 \begin{document}
-
-    \maketitle
-
-    次に，正の整数が素数であるかを判定する最古のアルゴリズムである\textbf{エラトステネスのふるい}について確認しよう．
+  \maketitle
 
     % 命題のあとのピリオドをなくしたい
-    \begin{prop}{\rm\bf 1.4.9}
+    \begin{prop}
       $n>1$が合成数ならば，$\sqrt{n}$以下の素数の約数を持つ
     \end{prop}
 
@@ -36,7 +49,7 @@
 
     この命題の対偶を取れば，次のような表現となる
 
-    \begin{prop}{\rm\bf 1.4.9${}^\text{$\prime$}$}
+    \begin{prop}
       $\sqrt{n}$以下の素数の約数を持たないならば，$n$は素数である．
     \end{prop}
 
@@ -46,7 +59,7 @@
 
     また，次の補題についても確認しよう．
 
-    \begin{lem}{\rm\bf 1.4.10}
+    \begin{lem}
       $m, n \in \mathbb{Z}$のとき，$n \mid m$, $n \neq \pm 1$ $\implies$ $n \nmid m + 1$
     \end{lem}
 
@@ -59,5 +72,173 @@
     今回のゼミにおいて，個人的に疑問に思ったのは $n \mid m$ によって $n \neq \pm 1$ $\implies$ $n \nmid m + 1$ を束縛しているのではないか，という点である．
     この事については，束縛させても仮定に用いても，帰結されるものに変わりはない．
     むしろ，今回の場合には$n \mid m+1$を仮定した際に，$n \nmid m$ または $n = \pm 1$を考え，それぞれの命題変数の成立の可否をを調べることが，考察の手立てとなる．
+
+    \begin{prop}
+      素数は無限個存在する
+    \end{prop}
+
+    \begin{proof}
+      素数が有限個存在すると仮定し，それを$p_1, p_2, ... , p_n $とおく．
+      $q=(p_1 p_2 \cdots p_n) + 1$とすれば，\textbf{Prop 1.4.8}より，$q$は素数を約数にもつ．
+      その素数の1つを$p$とおくと，$^{\exists}i \in \integer$, s.t. $0 \leq i \leq n$, $p = p_i$, $p \mid p_1 \cdots p_n$ である．
+      一方，\textbf{Lem 1.4.10}より，$\mathrm{gcd} (p_1 \cdots p_n, q)=1$であるが，これはどの素数も約数に持たない事を意味するため矛盾する．
+      よって，$p \neq p_1, ... , p_n$より，素数が有限個と仮定したことが誤りである．
+    \end{proof}
+
+    次に，合同式について定義する．
+
+    \begin{dfn}
+      $m \in \integer \setminus \cbra{0}$とする．$a, b \in \integer$で，$m \mid a-b$であるとき，
+      $a \equiv b \pmod m$とかき，$a,b$は$m$を法として合同であるという．
+    \end{dfn}
+
+    また，$\integer$における割り算の概念についても確認する．割り算は次の命題によって正当化される．
+
+    \begin{prop}
+      $a, b \in \integer, b \neq 0$ならば，$^{\exists !}q,r \in \integer$, s.t. $a=bq+r, 0 \leq r < \abs{b}$
+    \end{prop}
+
+    \begin{proof}
+      段階に分けて証明していく． \\
+      （存在すること） \\
+      (\ajroman{1}) $a \geq 0, b > 0$のとき \\
+      アルキメデスの公理より，$bq \leq a$をみたす$q \in \nat$は有限個である．
+      $q$をその中の最大値とする．$r = a-bq$とおくと，$r \geq b$のとき，$r-b \geq 0$より，
+      $a-b(q+1) = r - b \geq 0$で，$q$が最大の値であることに反する．
+      よって，$r < b$であり，$a \geq bq$より，$r \geq 0$である．\\
+      (\ajroman{2}) $a,b$が必ずしも正でないとき \\
+      (\ajroman{1})より，$^{\exists}q,r \in \integer$ s.t. $\abs{a} = \abs{b}q + r, 0 \leq r < \abs{b}$である．
+      このとき，絶対値を外した時に条件を満たす$q,r$が存在することを確認する．
+      \begin{enumerate}
+        \item $a \geq 0, b < 0$のとき\\
+        $a = -bq + r = b(-q) + r$となり成立．
+        \item $a < 0, b > 0$のとき\\
+        $-a = bq + r \iff a = b(-q)-r$となる．ここで，$r \neq 0$のとき，
+        $a = b(-q-1) + b-r$であり，$0 \leq b-r < b$となり成立．また，$r = 0$のときも成立する．
+        \item $a < 0, b < 0のとき$\\
+        $-a = -bq + r \iff a = bq - r$となる．ここで，$r \neq 0$のとき，
+        $a = b(q+1)-b-r = b(q+1) + \abs{b} - r$であり，$0 \leq b-r < \abs{b}$となり成立．また，$r = 0$のときも成立する．
+      \end{enumerate}
+      （一意的であること）\\
+      $a = bq + r = bq^{\prime}+r^{\prime}, q, q^{\prime}, r, r^{\prime} \in \integer, 0 \leq r, r^{\prime} < \abs{b}$とおくと，
+      $b(q-q^{\prime}) = r^{\prime} - r$である．
+      また，\textbf{Prop 1.3.4(3)}より，$\abs{r^{\prime} - r} < \abs{b}$であるが，
+      $\abs{b(q-q^{\prime})} \geq \abs{b}$より矛盾．
+    \end{proof}
+
+    この命題において，$q,r$を求めることを\textbf{割り算}といい，$q,r$をそれぞれ\textbf{商}と\textbf{余り}という．\\
+    次に，高校で学習した合同式と余りの関係性についても確認しよう．
+
+    \begin{prop}
+      $a,b \in \integer, m \in \integer \setminus \cbra{0}$とするとき，$a \equiv b \pmod m \iff a,b$を$m$で割ったときの余りが等しい
+    \end{prop}
+    \begin{proof}
+      ($\impliedby$)は自明．\\
+      ($\implies$)\\
+      $a \equiv b \pmod m \iff m \mid a-b$である．
+      $a,b$の$m$による割り算の結果を$a=mq+r, b=mq^{\prime} + r^{\prime}$とすると，
+      $a-b = m(q - q^{\prime})+ r - r^{\prime} = mc$となる$c \in \integer$が存在する．
+      よって，$r-r^{\prime} = m(c + q^{\prime} - q)となる．$
+      $r - r^{\prime} \neq 0$ならば，$c+q^{\prime} - q \neq 0$であり，$\abs{m(c + q^{\prime} - q)} \geq \abs{m}$となるが，
+      $\abs{r-r^{\prime}} < \abs{m}$であることに矛盾．よって，$r = r^{\prime}$ 
+    \end{proof}
+
+    また，合同式について次の性質が成立する．証明は容易であるため省略する．
+    
+    \begin{prop}
+      次の諸性質が成立する．
+      \begin{enumerate}
+        \item $a,a^{\prime}, b, b^{\prime} \in \integer, m \in \integer \setminus \cbra{0}$とするとき，$a \equiv a^{\prime}, b \equiv b^{\prime} \pmod m$なら，
+          \begin{equation}
+            a+b \equiv a^{\prime} + b^{\prime}, ab \equiv a^{\prime}b^{\prime} \pmod m \nonumber
+          \end{equation}
+        \item $a,a^{\prime}, b, b^{\prime} \in \integer, m, n \in \integer \setminus \cbra{0}, n \mid m$とするとき，
+          \begin{equation}
+            a \equiv b \pmod m \implies a \equiv b \pmod n \nonumber
+          \end{equation}
+        \item $a,a^{\prime}, b, b^{\prime} \in \integer, m, n \in \integer \setminus \cbra{0}$とするとき，
+          \begin{equation}
+            a \equiv b \pmod m \implies am \equiv bm \pmod {nm} \nonumber
+          \end{equation}
+      \end{enumerate}
+    \end{prop}
+
+    \begin{cor}
+      $ m \in \integer \setminus \cbra{0}, a,b,x,y \in \integer$とするとき，$a,b \equiv 0 \pmod m$なら，
+      $ax + by \equiv 0 \pmod m$である．
+      したがって，$a,b$が$m$で割り切れるなら，$ax+by$も$m$で割り切れる.
+    \end{cor}
+
+    少し脇道に逸れるが，高校までに学習した倍数の判定法と\textbf{$l$進法}について確認する．
+
+    \begin{dfn}
+      \textbf{整数$x>0$の$l$進法による表記}とは，$0 \leq a_0, ... , a_n < l$として，
+      $x = a_0 + a_1 l + ... + a_n l^n$と表すことである．
+      ここで，$a_i$のことを\textbf{$l^i$の位の数}と呼ぶ．
+    \end{dfn}
+
+    ここで，$l$進法による表記の一意性について確認する．
+    次のように，$x$が$l$進法について二つの表記で書けたとする．
+    \begin{displaymath}
+      x = \sum_{i=0}^{n}a_i l^i = \sum_{i=0}^{m}b_i l^i
+    \end{displaymath}
+    $N = max \cbra{n, m}$とおくと，$(a_0 - b_0) + (a_1 - b_1) l + ... + (a_N - b_N) l^N = 0$が成り立つ．
+    ここで，$l$を法とする合同式を考えると，$a_0 - b_0 \equiv 0 \pmod l \iff a_0 \equiv b_0 \pmod l$となる．
+    $0 \leq a_i, b_i < l$であるため，$a=b$を満たす．これを$N$回繰り返すことで，$x$の$l$進法における表記の一意性が確かめられる．
+
+    次に，$l=10$における有名な命題を紹介する．
+
+    \begin{prop}
+      \begin{enumerate}
+        \item 正の整数が$2,5$で割り切れること $\iff$ 正の整数の$1$の位の数がそれぞれ$2,5$で割り切れること
+        \item 正の整数が$3,9$で割り切れること $\iff$ 正の整数の各位の数の総和がそれぞれ$3,9$で割り切れること
+      \end{enumerate}
+    \end{prop}
+
+    \begin{proof}
+      \begin{enumerate}
+        \item $x \in \nat$を$10$進法で表すと，$x=a_0 + 10a_1 + ... + 10^n a_n = a_0 + 10(a_1 + ... + 10^{n-1}a_n)$となる.
+        よって，$x-a_0 = 10(a_1 + ... + 10^{n-1}a_n) \iff x \equiv a_0 \pmod {10}$である．
+        また，\textbf{Prop 1.4.18(2)}より，$2,5 \mid 10$なので，$x \equiv a_0 \pmod 2, x \equiv a_0 \pmod 5$
+        \item $x = a_0 + 10a_1 + ... + 10^n a_n = a_0 + a_1 + ... + a_n + (10 - 1)a_1 + ... + (10^n - 1) a_n$である．
+        ここで，$10^i - 1 \equiv 0 \pmod 9$より，$x \equiv a_n = a_0 + a_1 + ... + a_n \pmod 9$である．
+        \textbf{Prop 1.4.18(2)}より，$3 \mid 9$なので，$x \equiv a_n = a_0 + a_1 + ... + a_n \pmod 3$
+      \end{enumerate}
+    \end{proof}
+
+    また，高校で学習したように，合同式は剰余の計算において有効的である．特に高い冪の余りの計算について，ここでは確認しよう．
+
+    \begin{ex}
+      $16^4$を$13$で割ったときの余り
+    \end{ex}
+
+    $16 \equiv 3 \pmod {13}$を用いて，$16 \equiv 3 \pmod {13} \implies 16^2 \equiv 3^2 \pmod {13} \implies 16^4 \equiv 3^4 \equiv 81 \equiv 3 \pmod {13}$
+    よって，余りは$3$である.\\
+
+    $16^4$程度であれば，手計算でも行える範疇であるが，合同式は次のような手計算では行えない大きな数の冪に対して有効である．
+
+    \begin{ex}
+      $16^{100}$を$23$で割ったときの余り
+    \end{ex}
+
+    $100 = 2^6 + 2^5 + 2^2$と$2$進法で表すと，$16^{100} = 16^{2^6 + 2^5 + 2^2} = 16^{2^6} \cdot 16^{2^5} \cdot 16^{2^2}$となる．
+    ここで，$16^{2^6}, 16^{2^5}, 16^{2^2}$の余りについて考えていくとよい．具体的には
+    \begin{gather}
+      16^2 \equiv 3 \pmod {23} \nonumber \\
+      16^4 \equiv 9 \pmod {23} \nonumber \\
+      16^8 \equiv 12 \pmod {23} \nonumber \\
+      16^{16} \equiv 6 \pmod {23} \nonumber \\
+      16^{32} \equiv 13 \pmod {23} \nonumber \\
+      16^{64} \equiv 8 \pmod {23} \nonumber \\
+      16^{64} \cdot 16^{32} \equiv 12 \pmod {23} \nonumber \\
+      16^{64} \cdot 16^{32} \cdot 16^4 \equiv 16 \pmod {23} \nonumber \\
+    \end{gather}
+    となるので，求める余りは$16$である．
+    一般に，整数$n$を$2$進法で表すと，桁数は$\sbra{\log_2 n}+1$である．
+    なぜなら，$2$進法における桁数を$N$とおくと，$2^{N-1} \leq n < 2^N$である．
+    よって，$N-1 \leq \log_2 n < N$より，$N = \sbra{\log_2 n}+1$となる．
+    従って，$a^n \mod b$を求める時には，$n$の桁数からおよそ$\log_2 n$回の計算が必要となる．
+    それらを最大$\log_2 n$回掛けるので，計算の回数はおよそ$2\log_2 n$回となる．
+    
 
 \end{document}
