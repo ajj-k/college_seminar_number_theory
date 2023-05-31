@@ -34,7 +34,7 @@
   % \maketitle
 
     % 命題のあとのピリオドをなくしたい
-    \begin{prop}
+    \begin{prop} \label{1.4.9}
       $n>1$が合成数ならば，$\sqrt{n}$以下の素数の約数を持つ
     \end{prop}
 
@@ -43,58 +43,58 @@
       ただし，$n>1$の合成数より，$ l \neq 1, n$．ここで，$m=n/l$とおくと，$l,m \neq 1,n$，$n = lm$である．(合成数の定義から$l>0$)．
       もし，$l,m > \sqrt{n}$であるとき，$lm > n$となり矛盾する．
       よって，$l \leq \sqrt{n}$ または $m \leq \sqrt{n}$ となるため，$n$は$\sqrt{n}$以下の約数$l$を持つ． \\
-      \textbf{Prop 1.4.8} より，$l$は素数の約数を持ち，それを$p$と置くと$ p \mid l$であり，\textbf{Prop 1.4.7} より，推移律から$p \mid n$となる. \\
+      Prop~\ref{1.4.8} より，$l$は素数の約数を持ち，それを$p$と置くと$ p \mid l$であり，Prop~\ref{1.4.7} より，推移律から$p \mid n$となる. \\
       したがって，$p \leq l \leq \sqrt{n}$であるから，$n$は$\sqrt{n}$以下の素数の約数を持つ.
     \end{proof}
 
     この命題の対偶を取れば，次のような表現となる
 
-    \begin{prop}
+    \begin{prop} \label{1.4.9.1}
       $\sqrt{n}$以下の素数の約数を持たないならば，$n$は素数である．
     \end{prop}
 
-    「割り切れる（割り算）」の概念を規定するのは\textbf{Prop 1.4.15}とまだ先であるが，その概念を用いて説明するならば，
+    「割り切れる（割り算）」の概念を規定するのは本論文ではまだ先であるが，その概念を用いて説明するならば，
     本命題が主張することは ある正の整数$n$が与えられた時，$\sqrt{n}$以下の素数全てで$n$を割り切れない時，$n$が素数であることを主張する．
     すなわち，$n$が素数であることを調べる際に，$n$回ではなく$\sqrt{n}$回のステップのみで充分であることを意味する． \\
 
     また，次の補題についても確認しよう．
 
-    \begin{lem}
+    \begin{lem} \label{1.4.10}
       $m, n \in \mathbb{Z}$のとき，$n \mid m$, $n \neq \pm 1$ $\implies$ $n \nmid m + 1$
     \end{lem}
 
     \begin{proof}
       仮定より$^{\exists}a \in \mathbb{Z}$ s.t. $m = na$である．
       もし，$n \mid m+1$ならば，$^{\exists}b \in \mathbb{Z}$ s.t. $m+1 = nb$であり，
-      $1 = (m+1)-m = n(b-a)$である．\textbf{Cor 1.4.3} より，$n = \pm 1$であるが，これは矛盾
+      $1 = (m+1)-m = n(b-a)$である．Cor~\ref{1.4.3} より，$n = \pm 1$であるが，これは矛盾
     \end{proof}
 
     今回のゼミにおいて，個人的に疑問に思ったのは $n \mid m$ によって $n \neq \pm 1$ $\implies$ $n \nmid m + 1$ を束縛しているのではないか，という点である．
     この事については，束縛させても仮定に用いても，帰結されるものに変わりはない．
     むしろ，今回の場合には$n \mid m+1$を仮定した際に，$n \nmid m$ または $n = \pm 1$を考え，それぞれの命題変数の成立の可否をを調べることが，考察の手立てとなる．
 
-    \begin{prop}
+    \begin{prop} \label{1.4.11}
       素数は無限個存在する
     \end{prop}
 
     \begin{proof}
       素数が有限個存在すると仮定し，それを$p_1, p_2, ... , p_n $とおく．
-      $q=(p_1 p_2 \cdots p_n) + 1$とすれば，\textbf{Prop 1.4.8}より，$q$は素数を約数にもつ．
+      $q=(p_1 p_2 \cdots p_n) + 1$とすれば，Prop~\ref{1.4.8}より，$q$は素数を約数にもつ．
       その素数の1つを$p$とおくと，$^{\exists}i \in \integer$, s.t. $0 \leq i \leq n$, $p = p_i$, $p \mid p_1 \cdots p_n$ である．
-      一方，\textbf{Lem 1.4.10}より，$\mathrm{gcd} (p_1 \cdots p_n, q)=1$であるが，これはどの素数も約数に持たない事を意味するため矛盾する．
+      一方，Lem~\ref{1.4.10}より，$\mathrm{gcd} (p_1 \cdots p_n, q)=1$であるが，これはどの素数も約数に持たない事を意味するため矛盾する．
       よって，$p \neq p_1, ... , p_n$より，素数が有限個と仮定したことが誤りである．
     \end{proof}
 
     次に，合同式について定義する．
 
-    \begin{dfn}
+    \begin{dfn} \label{1.4.12}
       $m \in \integer \setminus \cbra{0}$とする．$a, b \in \integer$で，$m \mid a-b$であるとき，
       $a \equiv b \pmod m$とかき，$a,b$は$m$を法として合同であるという．
     \end{dfn}
 
     また，$\integer$における割り算の概念についても確認する．割り算は次の命題によって正当化される．
 
-    \begin{prop}
+    \begin{prop} \label{1.4.15}
       $a, b \in \integer, b \neq 0$ならば，$^{\exists !}q,r \in \integer$, s.t. $a=bq+r, 0 \leq r < \abs{b}$
     \end{prop}
 
@@ -122,14 +122,14 @@
       （一意的であること）\\
       $a = bq + r = bq^{\prime}+r^{\prime}, q, q^{\prime}, r, r^{\prime} \in \integer, 0 \leq r, r^{\prime} < \abs{b}$とおくと，
       $b(q-q^{\prime}) = r^{\prime} - r$である．
-      また，\textbf{Prop 1.3.4(3)}より，$\abs{r^{\prime} - r} < \abs{b}$であるが，
+      また，Prop~\ref{1.3.4}(3)より，$\abs{r^{\prime} - r} < \abs{b}$であるが，
       $\abs{b(q-q^{\prime})} \geq \abs{b}$より矛盾．
     \end{proof}
 
     この命題において，$q,r$を求めることを\textbf{割り算}といい，$q,r$をそれぞれ\textbf{商}と\textbf{余り}という．\\
     次に，高校で学習した合同式と余りの関係性についても確認しよう．
 
-    \begin{prop}
+    \begin{prop} \label{1.4.17}
       $a,b \in \integer, m \in \integer \setminus \cbra{0}$とするとき，$a \equiv b \pmod m \iff a,b$を$m$で割ったときの余りが等しい
     \end{prop}
     \begin{proof}
@@ -145,7 +145,7 @@
 
     また，合同式について次の性質が成立する．証明は容易であるため省略する．
     
-    \begin{prop}
+    \begin{prop} \label{1.4.18}
       次の諸性質が成立する．
       \begin{enumerate}
         \item $a,a^{\prime}, b, b^{\prime} \in \integer, m \in \integer \setminus \cbra{0}$とするとき，$a \equiv a^{\prime}, b \equiv b^{\prime} \pmod m$なら，
@@ -163,7 +163,7 @@
       \end{enumerate}
     \end{prop}
 
-    \begin{cor}
+    \begin{cor} \label{1.4.19}
       $ m \in \integer \setminus \cbra{0}, a,b,x,y \in \integer$とするとき，$a,b \equiv 0 \pmod m$なら，
       $ax + by \equiv 0 \pmod m$である．
       したがって，$a,b$が$m$で割り切れるなら，$ax+by$も$m$で割り切れる.
@@ -171,7 +171,7 @@
 
     少し脇道に逸れるが，高校までに学習した倍数の判定法と\textbf{$l$進法}について確認する．
 
-    \begin{dfn}
+    \begin{dfn} \label{1.4.20}
       \textbf{整数$x>0$の$l$進法による表記}とは，$0 \leq a_0, ... , a_n < l$として，
       $x = a_0 + a_1 l + ... + a_n l^n$と表すことである．
       ここで，$a_i$のことを\textbf{$l^i$の位の数}と呼ぶ．
@@ -188,7 +188,7 @@
 
     次に，$l=10$における有名な命題を紹介する．
 
-    \begin{prop}
+    \begin{prop} \label{1.4.21}
       \begin{enumerate}
         \item 正の整数が$2,5$で割り切れること $\iff$ 正の整数の$1$の位の数がそれぞれ$2,5$で割り切れること
         \item 正の整数が$3,9$で割り切れること $\iff$ 正の整数の各位の数の総和がそれぞれ$3,9$で割り切れること
@@ -199,16 +199,16 @@
       \begin{enumerate}
         \item $x \in \nat$を$10$進法で表すと，$x=a_0 + 10a_1 + ... + 10^n a_n = a_0 + 10(a_1 + ... + 10^{n-1}a_n)$となる.
         よって，$x-a_0 = 10(a_1 + ... + 10^{n-1}a_n) \iff x \equiv a_0 \pmod {10}$である．
-        また，\textbf{Prop 1.4.18(2)}より，$2,5 \mid 10$なので，$x \equiv a_0 \pmod 2, x \equiv a_0 \pmod 5$
+        また，Prop~\ref{1.4.18}(2)より，$2,5 \mid 10$なので，$x \equiv a_0 \pmod 2, x \equiv a_0 \pmod 5$
         \item $x = a_0 + 10a_1 + ... + 10^n a_n = a_0 + a_1 + ... + a_n + (10 - 1)a_1 + ... + (10^n - 1) a_n$である．
         ここで，$10^i - 1 \equiv 0 \pmod 9$より，$x \equiv a_n = a_0 + a_1 + ... + a_n \pmod 9$である．
-        \textbf{Prop 1.4.18(2)}より，$3 \mid 9$なので，$x \equiv a_n = a_0 + a_1 + ... + a_n \pmod 3$
+        Prop~\ref{1.4.18}(2)より，$3 \mid 9$なので，$x \equiv a_n = a_0 + a_1 + ... + a_n \pmod 3$
       \end{enumerate}
     \end{proof}
 
     また，高校で学習したように，合同式は剰余の計算において有効的である．特に高い冪の余りの計算について，ここでは確認しよう．
 
-    \begin{ex}
+    \begin{ex} \label{1.4.22}
       $16^4$を$13$で割ったときの余り
     \end{ex}
 
@@ -217,22 +217,22 @@
 
     $16^4$程度であれば，手計算でも行える範疇であるが，合同式は次のような手計算では行えない大きな数の冪に対して有効である．
 
-    \begin{ex}
+    \begin{ex} \label{1.4.22.1}
       $16^{100}$を$23$で割ったときの余り
     \end{ex}
 
     $100 = 2^6 + 2^5 + 2^2$と$2$進法で表すと，$16^{100} = 16^{2^6 + 2^5 + 2^2} = 16^{2^6} \cdot 16^{2^5} \cdot 16^{2^2}$となる．
     ここで，$16^{2^6}, 16^{2^5}, 16^{2^2}$の余りについて考えていくとよい．具体的には
-    \begin{gather}
-      16^2 \equiv 3 \pmod {23} \nonumber \\
-      16^4 \equiv 9 \pmod {23} \nonumber \\
-      16^8 \equiv 12 \pmod {23} \nonumber \\
-      16^{16} \equiv 6 \pmod {23} \nonumber \\
-      16^{32} \equiv 13 \pmod {23} \nonumber \\
-      16^{64} \equiv 8 \pmod {23} \nonumber \\
-      16^{64} \cdot 16^{32} \equiv 12 \pmod {23} \nonumber \\
-      16^{64} \cdot 16^{32} \cdot 16^4 \equiv 16 \pmod {23} \nonumber \\
-    \end{gather}
+    \begin{alignat*}
+        16^2 &\equiv 3 \pmod {23} \nonumber \\
+        16^4 &\equiv 9 \pmod {23} \nonumber \\
+        16^8 &\equiv 12 \pmod {23} \nonumber \\
+        16^{16} &\equiv 6 \pmod {23} \nonumber \\
+        16^{32} &\equiv 13 \pmod {23} \nonumber \\
+        16^{64} &\equiv 8 \pmod {23} \nonumber \\
+        16^{64} \cdot 16^{32} &\equiv 12 \pmod {23} \nonumber \\
+        16^{64} \cdot 16^{32} \cdot 16^4 &\equiv 16 \pmod {23} \nonumber
+    \end{alignat*}
     となるので，求める余りは$16$である．
     一般に，整数$n$を$2$進法で表すと，桁数は$\sbra{\log_2 n}+1$である．
     なぜなら，$2$進法における桁数を$N$とおくと，$2^{N-1} \leq n < 2^N$である．
