@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1685548188 "thesis.dvi" "thesis.pdf" "thesis" 1685548188 0
-  "thesis.dvi" 1685548188 33252 b3ace8ca79716774c5070a3eeb368df6 "latex"
+["dvipdf"] 1686317328 "thesis.dvi" "thesis.pdf" "thesis" 1686317328 0
+  "thesis.dvi" 1686317328 33360 d0acf9f5202bdda95f50698a004e614f "latex"
   (generated)
   "thesis.pdf"
   (rewritten before read)
-["latex"] 1685548188 "/Users/ajj-k/Desktop/college_seminar_number_theory/thesis.tex" "thesis.dvi" "thesis" 1685548188 0
-  "/Users/ajj-k/Desktop/college_seminar_number_theory/thesis.tex" 1685547701 1468 ad230cba99dbf1f7a9ebbecc0cc488d1 ""
+["latex"] 1686317327 "/Users/ajj-k/Desktop/college_seminar_number_theory/thesis.tex" "thesis.dvi" "thesis" 1686317328 0
+  "/Users/ajj-k/Desktop/college_seminar_number_theory/thesis.tex" 1686317188 1646 093418d0f92779c935f3800cd4e6a271 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm" 1463434352 856 39c171483fe1bb7d0e1368980c0c205b ""
@@ -66,10 +66,10 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/web2c/eptex/platex.fmt" 1680590991 7883690 4fdbaac441baca0ec1c1d6fa43389cd3 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "ohashi/15-21.tex" 1685548187 13981 9110e3ee7b323dbc9232bcc6c49558b1 ""
-  "osumi/202303.tex" 1685547101 10825 d913bc3b1804d6349c0ed0c52f4f2b5e ""
-  "thesis.aux" 1685548188 2398 913f6fddbbb191753789a2d2d46615dc "latex"
-  "thesis.tex" 1685547701 1468 ad230cba99dbf1f7a9ebbecc0cc488d1 ""
+  "ohashi/15-21.tex" 1686317327 13951 f5e29e8e7c361cd7d351ccd910d8241e ""
+  "osumi/10-15.tex" 1686317174 10728 2e7540ad3db6d846b7bdbc702fe1578a ""
+  "thesis.aux" 1686317328 2398 913f6fddbbb191753789a2d2d46615dc "latex"
+  "thesis.tex" 1686317188 1646 093418d0f92779c935f3800cd4e6a271 ""
   (generated)
   "thesis.aux"
   "thesis.dvi"

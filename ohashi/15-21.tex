@@ -43,7 +43,7 @@
       ただし，$n>1$の合成数より，$ l \neq 1, n$．ここで，$m=n/l$とおくと，$l,m \neq 1,n$，$n = lm$である．(合成数の定義から$l>0$)．
       もし，$l,m > \sqrt{n}$であるとき，$lm > n$となり矛盾する．
       よって，$l \leq \sqrt{n}$ または $m \leq \sqrt{n}$ となるため，$n$は$\sqrt{n}$以下の約数$l$を持つ． \\
-      Prop~\ref{1.4.8} より，$l$は素数の約数を持ち，それを$p$と置くと$ p \mid l$であり，Prop~\ref{1.4.7} より，推移律から$p \mid n$となる. \\
+      \cref{1.4.8} より，$l$は素数の約数を持ち，それを$p$と置くと$ p \mid l$であり，\cref{1.4.7} より，推移律から$p \mid n$となる. \\
       したがって，$p \leq l \leq \sqrt{n}$であるから，$n$は$\sqrt{n}$以下の素数の約数を持つ.
     \end{proof}
 
@@ -66,7 +66,7 @@
     \begin{proof}
       仮定より$^{\exists}a \in \mathbb{Z}$ s.t. $m = na$である．
       もし，$n \mid m+1$ならば，$^{\exists}b \in \mathbb{Z}$ s.t. $m+1 = nb$であり，
-      $1 = (m+1)-m = n(b-a)$である．Cor~\ref{1.4.3} より，$n = \pm 1$であるが，これは矛盾
+      $1 = (m+1)-m = n(b-a)$である．\cref{1.4.3} より，$n = \pm 1$であるが，これは矛盾
     \end{proof}
 
     今回のゼミにおいて，個人的に疑問に思ったのは $n \mid m$ によって $n \neq \pm 1$ $\implies$ $n \nmid m + 1$ を束縛しているのではないか，という点である．
@@ -79,9 +79,9 @@
 
     \begin{proof}
       素数が有限個存在すると仮定し，それを$p_1, p_2, ... , p_n $とおく．
-      $q=(p_1 p_2 \cdots p_n) + 1$とすれば，Prop~\ref{1.4.8}より，$q$は素数を約数にもつ．
+      $q=(p_1 p_2 \cdots p_n) + 1$とすれば，\cref{1.4.8}より，$q$は素数を約数にもつ．
       その素数の1つを$p$とおくと，$^{\exists}i \in \integer$, s.t. $0 \leq i \leq n$, $p = p_i$, $p \mid p_1 \cdots p_n$ である．
-      一方，Lem~\ref{1.4.10}より，$\mathrm{gcd} (p_1 \cdots p_n, q)=1$であるが，これはどの素数も約数に持たない事を意味するため矛盾する．
+      一方，\cref{1.4.10}より，$\mathrm{gcd} (p_1 \cdots p_n, q)=1$であるが，これはどの素数も約数に持たない事を意味するため矛盾する．
       よって，$p \neq p_1, ... , p_n$より，素数が有限個と仮定したことが誤りである．
     \end{proof}
 
@@ -122,7 +122,7 @@
       （一意的であること）\\
       $a = bq + r = bq^{\prime}+r^{\prime}, q, q^{\prime}, r, r^{\prime} \in \integer, 0 \leq r, r^{\prime} < \abs{b}$とおくと，
       $b(q-q^{\prime}) = r^{\prime} - r$である．
-      また，Prop~\ref{1.3.4}(3)より，$\abs{r^{\prime} - r} < \abs{b}$であるが，
+      また，\cref{1.3.4}(3)より，$\abs{r^{\prime} - r} < \abs{b}$であるが，
       $\abs{b(q-q^{\prime})} \geq \abs{b}$より矛盾．
     \end{proof}
 
@@ -199,10 +199,10 @@
       \begin{enumerate}
         \item $x \in \nat$を$10$進法で表すと，$x=a_0 + 10a_1 + ... + 10^n a_n = a_0 + 10(a_1 + ... + 10^{n-1}a_n)$となる.
         よって，$x-a_0 = 10(a_1 + ... + 10^{n-1}a_n) \iff x \equiv a_0 \pmod {10}$である．
-        また，Prop~\ref{1.4.18}(2)より，$2,5 \mid 10$なので，$x \equiv a_0 \pmod 2, x \equiv a_0 \pmod 5$
+        また，\cref{1.4.18}(2)より，$2,5 \mid 10$なので，$x \equiv a_0 \pmod 2, x \equiv a_0 \pmod 5$
         \item $x = a_0 + 10a_1 + ... + 10^n a_n = a_0 + a_1 + ... + a_n + (10 - 1)a_1 + ... + (10^n - 1) a_n$である．
         ここで，$10^i - 1 \equiv 0 \pmod 9$より，$x \equiv a_n = a_0 + a_1 + ... + a_n \pmod 9$である．
-        Prop~\ref{1.4.18}(2)より，$3 \mid 9$なので，$x \equiv a_n = a_0 + a_1 + ... + a_n \pmod 3$
+        \cref{1.4.18}(2)より，$3 \mid 9$なので，$x \equiv a_n = a_0 + a_1 + ... + a_n \pmod 3$
       \end{enumerate}
     \end{proof}
 

@@ -312,10 +312,10 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT ./osumi/202303.tex
-INPUT osumi/202303.tex
-INPUT ./osumi/202303.tex
-INPUT osumi/202303.tex
+INPUT ./osumi/10-15.tex
+INPUT osumi/10-15.tex
+INPUT ./osumi/10-15.tex
+INPUT osumi/10-15.tex
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
